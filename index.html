@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza Clara — O Conceito Máximo em Beleza Feminina</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAF8F5;
+            color: #292524;
+        }
+        
+        .barra-aviso {
+            background-color: #1c1917;
+            color: #f5f5f4;
+            font-size: 11px;
+            padding: 12px;
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e7e5e4;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 26px;
+            margin: 0;
+            letter-spacing: 6px;
+            color: #1c1917;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: #78716c;
+            text-decoration: none;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-right: 35px;
+            font-weight: 600;
+        }
+
+        .btn-header {
+            background-color: #1c1917;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%) !important;
+            color: white !important;
+            padding: 120px 60px;
+            text-align: left;
+            min-height: 55vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-tag {
+            color: #f43f5e;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .hero h2 {
+            font-size: 46px;
+            font-weight: 300;
+            margin: 0 0 25px 0;
+            max-width: 850px;
+            line-height: 1.2;
+            color: white !important;
+        }
+
+        .hero p {
+            color: #e7e5e4 !important;
+            font-size: 18px;
+            max-width: 650px;
+            line-height: 1.6;
+            margin: 0 0 45px 0;
+        }
+
+        .btn-hero {
+            background-color: #e11d48;
+            color: white;
+            padding: 18px 38px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 2px;
+            display: inline-block;
+        }
+
+        .container-diferenciais {
+            max-width: 1200px;
+            margin: -30px auto 60px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 25px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card-dif {
+            background: white;
+            padding: 35px 25px;
+            flex: 1;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            border-top: 4px solid #e11d48;
+        }
+
+        .card-dif h5 {
+            margin: 0 0 12px 0;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1c1917;
+        }
+
+        .card-dif p {
+            margin: 0;
+            font-size: 13px;
+            color: #78716c;
+            line-height: 1.6;
+        }
+
+        .menu-servicos {
+            background-color: #f5f5f4;
+            padding: 80px 40px;
+            text-align: center;
+            border-top: 1px solid #e7e5e4;
+        }
+
+        .grid-servicos {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 50px auto 0 auto;
+        }
+
+        .bloco-servico {
+            background: white;
+            padding: 50px 40px;
+            flex: 1;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .bloco-servico h4 {
+            color: #e11d48;
+            margin-top: 0;
+            font-size: 22px;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #f5f5f4;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .item-menu {
+            margin-bottom: 30px;
+        }
+
+        .linha-preco {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 16px;
+            color: #1c1917;
+        }
+
+        .desc-servico {
+            font-size: 13px;
+            color: #78716c;
+            margin: 6px 0 0 0;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        .whats-flutuante {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 2000;
+            font-size: 28px;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #0c0a09;
+            color: #a8a29e;
+            padding: 60px 40px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            header { padding: 20px; flex-direction: column; gap: 15px; }
+            .hidden-mobile { display: none; }
+            .hero h2 { font-size: 34px; }
+            .container-diferenciais { flex-direction: column; margin-top: 20px; }
+            .grid-servicos { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me" target="_blank" class="whats-flutuante">💬</a>
+
+    <div class="barra-aviso">
+        ✨ Agenda Aberta — Poucos horários disponíveis esta semana!
+    </div>
+
+    <header>
+        <h1>BELEZA CLARA</h1>
+        <nav class="hidden-mobile">
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Menu de Experiências</a>
+        </nav>
+        <a href="https://wa.me" target="_blank" class="btn-header">Reservar Horário</a>
+    </header>
+
+    <section class="hero" id="inicio">
+        <span class="hero-tag">Alta Performance & Estética Avançada</span>
+        <h2>Onde a sua essência encontra a sofisticação.</h2>
+        <p>Descubra um refúgio exclusivo projetado para realçar sua potência visual. Técnicas de vanguarda internacional em corte e coloração no Guará.</p>
+        <div>
+            <a href="https://wa.me" target="_blank" class="btn-hero">Agendar Atendimento VIP</a>
+        </div>
+    </section>
+
+    <div class="container-diferenciais">
+        <div class="card-dif">
+            <h5>✨ Visagismo Customizado</h5>
+            <p>Estudo detalhado das suas linhas faciais para desenhar o corte perfeito.</p>
+        </div>
+        <div class="card-dif" style="border-top-color: #1c1917;">
+            <h5>🧪 Linha Internacional</h5>
+            <p>Utilizamos apenas os produtos mais luxuosos do mercado mundial.</p>
+        </div>
+        <div class="card-dif" style="border-top-color: #fda4af;">
+            <h5>🥂 Experiência VIP</h5>
+            <p>Desfrute de uma atmosfera relaxante com nosso menu cortesia de cafés e drinks.</p>
+        </div>
+    </div>
+
+    <section class="menu-servicos" id="servicos">
+        <span style="color: #e11d48; text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: bold;">Menu de Luxo</span>
+        <h3 style="font-size: 38px; font-weight: 300; margin: 10px 0 0 0;">Serviços & Experiências</h3>
+        
+        <div class="grid-servicos">
+            <div class="bloco-servico">
+                <h4>💇‍♀️ Hair Couture</h4>
+                <div class="item-menu">
+                    <div class="linha-preco"><span>Corte Conceito Design</span> <span>R$ 120</span></div>
+                    <p class="desc-servico">Inclui lavagem terapêutica capilar, massagem craniana e finalização.</p>
+                </div>
+                <div class="item-menu">
+                    <div class="linha-preco"><span>Mechas Premium</span> <span>R$ 480</span></div>
+                    <p class="desc-servico">Técnica de clareamento saudável com protetor de fibra integrado.</p>
+                </div>
+            </div>
+
+            <div class="bloco-servico">
+                <h4>💅 Nails & Esthetics</h4>
+                <div class="item-menu">
+                    <div class="linha-preco"><span>Spa de Mãos e Pés</span> <span>R$ 90</span></div>
+                    <p class="desc-servico">Esfoliação profunda, hidratação intensa e acabamento fino.</p>
+                </div>
+                <div class="item-menu">
+                    <div class="linha-preco"><span>Alongamento Fibra Premium</span> <span>R$ 190</span></div>
+                    <p class="desc-servico">Unhas de gel finas com aspecto natural e máxima durabilidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="font-size: 16px; color: white; margin-bottom: 10px;">📍 QE 42 — Guará, Brasília - DF</p>
+        <p>⏰ Horários: Terça a Sábado — 09h às 20h</p>
